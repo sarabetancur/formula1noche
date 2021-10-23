@@ -14,7 +14,7 @@ import java.sql.DriverManager;
  */
 public class ModeloBD {
     
-    private String servidor="jdbc:mysql://localhost/formula180";
+    private String servidor="jdbc:mysql://localhost/formula1";
     private String usuario="root";
     private String password="";
 
