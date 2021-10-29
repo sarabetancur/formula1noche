@@ -21,7 +21,7 @@ public class ConsultasEscuderia extends ModeloBD{
     public boolean registrarEscuderia(Escuderia escuderia){
         
         Connection conexion=conectarBD();
-        String query="INSERT INTO escuderias(id,escuderia,presupuesto,motor)"
+        String query="INSERT INTO escuderias(id,nombre,presupuesto,tipo_motor)"
                 + "VALUES (?,?,?,?)";
         
         try{
@@ -72,9 +72,9 @@ public class ConsultasEscuderia extends ModeloBD{
             if(resultadoSQL.next()){
                 
                 escuderia.setId(resultadoSQL.getString("id"));
-                escuderia.setNombre(resultadoSQL.getString("escuderia"));
+                escuderia.setNombre(resultadoSQL.getString("nombre"));
                 escuderia.setPresupuesto(resultadoSQL.getInt("presupuesto"));
-                escuderia.setTipoMotor(resultadoSQL.getString("motor"));
+                escuderia.setTipoMotor(resultadoSQL.getString("tipo_motor"));
                 
                 return escuderia;
                 
